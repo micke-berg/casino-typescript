@@ -1,0 +1,49 @@
+:root {
+	--main-bg-color: rgb(79, 4, 79);
+	--main-color: rgb(155, 17, 155);
+	--main-text-color: white;
+	--accent-color: orange;
+	--box-shadow: 2px 2px 10px 4px rgba(0, 0, 0, 0.2);
+	--padding-md: 10px 20px;
+	--font-size-lg: 2.65rem;
+	--font-size-md: 1.45rem;
+	--font-size-sm: 1.15rem;
+	--font-weight-bold: 700;
+	--font-weight-normal: 500;
+	--font-weight-thin: 300;
+	--scale: 1.03;
+	--border-radius: 6px;
+}
+
+h1,
+h2 {
+	margin: 0px;
+	padding: 0px;
+	color: var(--main-text-color);
+}
+
+h1 {
+	font-size: var(--font-size-lg);
+}
+
+h2 {
+	font-size: var(--font-size-md);
+	font-weight: var(--font-weight-bold);
+}
+
+.wrapper {
+	max-width: 90%;
+	margin: auto;
+	padding-bottom: 4%;
+	padding-top: 4%;
+}
+
+.header {
+	margin: 40px 0px 20px 0px;
+}
+
+.grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+	gap: 20px;
+}
