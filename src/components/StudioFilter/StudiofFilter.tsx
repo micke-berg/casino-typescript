@@ -3,6 +3,7 @@ import styles from './studioFilter.module.scss';
 import { Studios, Games } from '../../types';
 
 type Props = {
+	header: string;
 	studios: Studios[];
 	games: Games[];
 	filterGamesByCurrency: (Game: Games[]) => void;
@@ -11,6 +12,7 @@ type Props = {
 
 const StudioFilter = ({
 	style,
+	header,
 	studios,
 	games,
 	filterGamesByCurrency,
@@ -21,17 +23,24 @@ const StudioFilter = ({
 	};
 
 	return (
-		<div className={styles.container}>
-			{studios?.map((studio) => (
-				<div
-					key={studio.id}
-					className={styles.item}
-					style={{ ...style }}
-					onClick={() => handleFilterStudio(studio.id)}
-				>
-					<img className={styles.img} src={studio.imageUrl} alt={studio.name} />
-				</div>
-			))}
+		<div>
+			<h2 className="header">{header}</h2>
+			<div className={styles.container}>
+				{studios?.map((studio) => (
+					<div
+						key={studio.id}
+						className={styles.item}
+						style={{ ...style }}
+						onClick={() => handleFilterStudio(studio.id)}
+					>
+						<img
+							className={styles.img}
+							src={studio.imageUrl}
+							alt={studio.name}
+						/>
+					</div>
+				))}
+			</div>
 		</div>
 	);
 };
