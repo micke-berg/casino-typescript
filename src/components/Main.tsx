@@ -5,6 +5,7 @@ import Search from './Search/Search';
 import Select from './Select/Select';
 import StudioFilter from './StudioFilter/StudiofFilter';
 import { Currencies, Games, Studios, Tags } from '../types';
+import GameCategories from './GameCategories/GameCategories';
 
 const Main = () => {
 	const [data, setData] = useState<any>([]);
@@ -125,42 +126,24 @@ const Main = () => {
 					setSelectedValue={setSelectedCurrency}
 				/>
 			</div>
-			<div>
-				{tags ? (
-					<>
-						<h2 className="header">Categories</h2>
-						<div className="grid">
-							{tagsInFilteredGames?.map((tag) => (
-								<Button
-									key={tag.id}
-									onClick={() => handleFilterCategories(tag.id)}
-								>
-									{tag.name}
-								</Button>
-							))}
-							<Button
-								title="All games"
-								style={{
-									backgroundColor: 'orange',
-								}}
-								onClick={() => handleResetToAllGames()}
-							/>
-						</div>
-					</>
-				) : null}
-			</div>
-			<div>
-				{studios ? (
-					<>
-						<h2 className="header">Studios</h2>
-						<StudioFilter
-							studios={studios}
-							games={games}
-							filterGamesByCurrency={filterGamesByCurrency}
-						/>
-					</>
-				) : null}
-			</div>
+
+			{tags ? (
+				<GameCategories
+					tagsInFilteredGames={tagsInFilteredGames}
+					handleFilterCategories={handleFilterCategories}
+					handleResetToAllGames={handleResetToAllGames}
+				/>
+			) : null}
+
+			{studios ? (
+				<StudioFilter
+					header="Studios"
+					studios={studios}
+					games={games}
+					filterGamesByCurrency={filterGamesByCurrency}
+				/>
+			) : null}
+
 			{games ? (
 				<List games={filteredGames} studios={studios} header="Games" />
 			) : null}
