@@ -69,9 +69,9 @@ const Main = () => {
 	const handleTags = () => {
 		// Filter only tags used in games
 		const temp = games?.map((game) => game.gameTags).map((gt) => gt) || [];
-		const toOneArray = [].concat(...temp);
-		const allGameTagsUsed = toOneArray.filter(
-			(el, i) => toOneArray.indexOf(el) === i
+		const gameTagsToOneArray = [].concat(...temp);
+		const allGameTagsUsed = gameTagsToOneArray.filter(
+			(el, i) => gameTagsToOneArray.indexOf(el) === i
 		);
 
 		const gameTags: Tags[] = [];
