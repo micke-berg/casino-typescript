@@ -1,4 +1,3 @@
-import React from 'react';
 import { Tags } from '../../types';
 import Button from '../Button/Button';
 

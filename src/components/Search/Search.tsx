@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import styles from './search.module.scss';
 import { MdClear, MdOutlineSearch } from 'react-icons/md';
 import { Games } from '../../types';

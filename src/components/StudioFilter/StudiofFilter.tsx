@@ -1,4 +1,3 @@
-import React from 'react';
 import styles from './studioFilter.module.scss';
 import { Studios, Games } from '../../types';
 

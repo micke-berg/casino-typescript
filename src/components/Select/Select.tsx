@@ -1,4 +1,3 @@
-import React from 'react';
 import styles from './select.module.scss';
 import { Options } from '../../types';
 
