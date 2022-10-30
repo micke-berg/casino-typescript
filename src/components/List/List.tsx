@@ -5,13 +5,12 @@ import { Games, Studios } from '../../types';
 type Props = {
 	games: Games[];
 	studios: Studios[];
-	header: string;
 };
 
-const List = ({ games, studios, header }: Props) => {
+const List = ({ games, studios }: Props) => {
 	return (
 		<div>
-			<h2 className="header">{header}</h2>
+			<h2 className="header">Games</h2>
 			<ul
 				className="grid"
 				style={{

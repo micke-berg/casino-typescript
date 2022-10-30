@@ -137,16 +137,13 @@ const Main = () => {
 
 			{studios ? (
 				<StudioFilter
-					header="Studios"
 					studios={studios}
 					games={games}
 					filterGamesByCurrency={filterGamesByCurrency}
 				/>
 			) : null}
 
-			{games ? (
-				<List games={filteredGames} studios={studios} header="Games" />
-			) : null}
+			{games ? <List games={filteredGames} studios={studios} /> : null}
 		</div>
 	);
 };
