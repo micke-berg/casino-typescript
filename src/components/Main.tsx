@@ -1,5 +1,4 @@
-import React, { useEffect, useState } from 'react';
-import Button from './Button/Button';
+import { useEffect, useState } from 'react';
 import List from './List/List';
 import Search from './Search/Search';
 import Select from './Select/Select';
